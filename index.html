@@ -25,28 +25,37 @@
   <meta name="twitter:description" content="Complete guide to gold printing techniques, foil stamping, digital gold, and luxury atelier craftsmanship.">
   <meta name="twitter:image" content="https://ateliergolddruck.com/assets/images/hero.jpg">
 
-  <!-- Google Search Console & Analytics -->
+  <!-- Preload LCP Image for Fast Mobile Paint -->
+  <link rel="preload" as="image" href="assets/images/hero.webp" type="image/webp" fetchpriority="high">
+
+  <!-- Resource Hints & Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Google Search Console -->
   <meta name="google-site-verification" content="2zq5BmyyL5v1FGsiRTo5L7MwG7xBEX7CNoJ-mO-LJJo" />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics (Non-blocking) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QTK8DBWKV5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-QTK8DBWKV5');
   </script>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
-  <link rel="apple-touch-icon" href="assets/images/favicon.jpg">
+  <link rel="icon" type="image/webp" href="assets/images/favicon.webp">
+  <link rel="apple-touch-icon" href="assets/images/favicon.webp">
 
-  <!-- Preconnect & Stylesheets -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Stylesheets & Non-blocking Font Loading -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+  </noscript>
 
   <!-- Structured Data / Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -142,7 +151,10 @@
   <header class="site-header">
     <div class="container header-container">
       <a href="index.html" class="brand-logo" aria-label="Atelier Golddruck Homepage">
-        <img src="assets/images/logo.jpg" alt="Atelier Golddruck Monogram Logo" width="44" height="44">
+        <picture>
+          <source srcset="assets/images/logo.webp" type="image/webp">
+          <img src="assets/images/logo.jpg" alt="Atelier Golddruck Monogram Logo" width="44" height="44">
+        </picture>
         <span class="brand-logo-text">ATELIER<span>GOLDDRUCK</span></span>
       </a>
 
@@ -185,7 +197,10 @@
         </div>
 
         <figure class="hero-image-wrapper">
-          <img src="assets/images/hero.jpg" alt="Master printmaker operating traditional gold foil stamping machine in Atelier Golddruck workshop" class="img-responsive" width="1200" height="675" fetchpriority="high">
+          <picture>
+            <source srcset="assets/images/hero.webp" type="image/webp">
+            <img src="assets/images/hero.jpg" alt="Master printmaker operating traditional gold foil stamping machine in Atelier Golddruck workshop" class="img-responsive" width="1200" height="675" fetchpriority="high">
+          </picture>
           <figcaption>Figure 1: Master printmaker applying gold foil stamping on premium dark cardstock in an atelier workshop.</figcaption>
         </figure>
       </div>
@@ -333,7 +348,10 @@
 
           <!-- Visual Comparison Graphic Section -->
           <figure>
-            <img src="assets/images/gold_foil_vs_ink.jpg" alt="Visual comparison chart showing Gold Foil Stamping vs Metallic Gold Ink vs CMYK Yellow Ink" class="img-responsive" width="1200" height="675">
+            <picture>
+              <source srcset="assets/images/gold_foil_vs_ink.webp" type="image/webp">
+              <img src="assets/images/gold_foil_vs_ink.jpg" alt="Visual comparison chart showing Gold Foil Stamping vs Metallic Gold Ink vs CMYK Yellow Ink" class="img-responsive" width="1200" height="675" loading="lazy" decoding="async">
+            </picture>
             <figcaption>Figure 2: Comprehensive visual comparison chart between Hot Foil Stamping, Metallic Gold Ink, and flat CMYK Yellow printing.</figcaption>
           </figure>
 
@@ -407,7 +425,10 @@
           <h2 id="applications">Where Is Ateliergolddruck Most Useful?</h2>
           
           <figure>
-            <img src="assets/images/luxury_packaging.jpg" alt="Luxury black presentation box with gold foil emblem, wedding invitations, and luxury business cards" class="img-responsive" width="1200" height="675">
+            <picture>
+              <source srcset="assets/images/luxury_packaging.webp" type="image/webp">
+              <img src="assets/images/luxury_packaging.jpg" alt="Luxury black presentation box with gold foil emblem, wedding invitations, and luxury business cards" class="img-responsive" width="1200" height="675" loading="lazy" decoding="async">
+            </picture>
             <figcaption>Figure 3: Premier applications of golddruck &mdash; custom foil presentation box, wedding invitations, and luxury cardstock.</figcaption>
           </figure>
 
@@ -624,7 +645,10 @@
       <div class="footer-grid">
         <div>
           <a href="index.html" class="brand-logo">
-            <img src="assets/images/logo.jpg" alt="Atelier Golddruck Logo" width="40" height="40">
+            <picture>
+              <source srcset="assets/images/logo.webp" type="image/webp">
+              <img src="assets/images/logo.jpg" alt="Atelier Golddruck Logo" width="40" height="40">
+            </picture>
             <span class="brand-logo-text">ATELIER<span>GOLDDRUCK</span></span>
           </a>
           <p class="footer-brand-desc">
