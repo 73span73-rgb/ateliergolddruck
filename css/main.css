@@ -1,28 +1,26 @@
 /* ==========================================================================
-   ATELIER GOLDDRUCK - CORE DESIGN SYSTEM & STYLESHEET
+   ATELIER GOLDDRUCK - CORE DESIGN SYSTEM & STYLESHEET (LIGHT THEME)
    Optimized for 100 PageSpeed score, responsive luxury design, zero CLS
    ========================================================================== */
 
-
-
 :root {
-  /* Color Palette */
-  --bg-dark: #0B0D10;
-  --bg-card: #13171D;
-  --bg-card-hover: #1A1F27;
-  --bg-surface: #181C23;
-  --border-color: rgba(212, 175, 55, 0.18);
-  --border-gold-glow: rgba(212, 175, 55, 0.4);
+  /* Color Palette - Premium Luxury Light Theme */
+  --bg-dark: #FAF9F6;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F5F3ED;
+  --bg-surface: #F3F0EA;
+  --border-color: rgba(184, 134, 11, 0.22);
+  --border-gold-glow: rgba(184, 134, 11, 0.45);
   
-  --text-main: #F4F4F6;
-  --text-muted: #A0A5B1;
-  --text-heading: #FFFFFF;
+  --text-main: #2C2D31;
+  --text-muted: #5C6069;
+  --text-heading: #121316;
   
-  --gold-primary: #D4AF37;
-  --gold-light: #F3E5AB;
-  --gold-dark: #996515;
-  --gold-gradient: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA771C 100%);
-  --gold-glow: 0 4px 25px rgba(212, 175, 55, 0.2);
+  --gold-primary: #B8860B;
+  --gold-light: #855F08;
+  --gold-dark: #5E4304;
+  --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #B8860B 50%, #855F08 100%);
+  --gold-glow: 0 6px 20px rgba(184, 134, 11, 0.15);
   
   /* Fonts */
   --font-heading: 'Cinzel', serif;
@@ -144,12 +142,12 @@ strong {
 
 blockquote {
   border-left: 4px solid var(--gold-primary);
-  background: rgba(212, 175, 55, 0.05);
+  background: rgba(184, 134, 11, 0.08);
   padding: 1.25rem 1.75rem;
   margin: 2rem 0;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   font-style: italic;
-  color: #E2E4E9;
+  color: #3A3C42;
 }
 
 /* Base Layout Helpers */
@@ -176,7 +174,7 @@ blockquote {
   align-items: center;
   gap: 0.5rem;
   padding: 0.4rem 1rem;
-  background: rgba(212, 175, 55, 0.12);
+  background: rgba(184, 134, 11, 0.12);
   border: 1px solid var(--border-color);
   border-radius: 50px;
   color: var(--gold-light);
@@ -206,14 +204,14 @@ blockquote {
 
 .btn-primary {
   background: var(--gold-gradient);
-  color: #000000;
+  color: #FFFFFF;
   box-shadow: var(--gold-glow);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(212, 175, 55, 0.35);
-  color: #000;
+  box-shadow: 0 6px 25px rgba(184, 134, 11, 0.35);
+  color: #FFFFFF;
 }
 
 .btn-outline {
@@ -223,7 +221,7 @@ blockquote {
 }
 
 .btn-outline:hover {
-  background: rgba(212, 175, 55, 0.1);
+  background: rgba(184, 134, 11, 0.1);
   border-color: var(--gold-primary);
 }
 
@@ -238,7 +236,7 @@ figure {
   display: block;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 figcaption {
@@ -266,7 +264,7 @@ table {
 
 th, td {
   padding: 1rem 1.25rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 th {
