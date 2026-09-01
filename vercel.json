@@ -17,6 +17,14 @@
     {
       "source": "/techsized-com",
       "destination": "/techsized-com.html"
+    },
+    {
+      "source": "/thealitekeepsafe-com/",
+      "destination": "/thealitekeepsafe-com.html"
+    },
+    {
+      "source": "/thealitekeepsafe-com",
+      "destination": "/thealitekeepsafe-com.html"
     }
   ],
   "headers": [
