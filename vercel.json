@@ -25,6 +25,14 @@
     {
       "source": "/thealitekeepsafe-com",
       "destination": "/thealitekeepsafe-com.html"
+    },
+    {
+      "source": "/droven-io-enterprise-tech-innovation/",
+      "destination": "/droven-io-enterprise-tech-innovation.html"
+    },
+    {
+      "source": "/droven-io-enterprise-tech-innovation",
+      "destination": "/droven-io-enterprise-tech-innovation.html"
     }
   ],
   "headers": [
