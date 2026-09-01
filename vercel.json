@@ -9,6 +9,14 @@
     {
       "source": "/glaadvoice-com",
       "destination": "/glaadvoice-com.html"
+    },
+    {
+      "source": "/techsized-com/",
+      "destination": "/techsized-com.html"
+    },
+    {
+      "source": "/techsized-com",
+      "destination": "/techsized-com.html"
     }
   ],
   "headers": [
