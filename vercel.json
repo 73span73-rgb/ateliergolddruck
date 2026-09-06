@@ -65,6 +65,14 @@
     {
       "source": "/linkrify",
       "destination": "/linkrify.html"
+    },
+    {
+      "source": "/erikkapost-com/",
+      "destination": "/erikkapost-com.html"
+    },
+    {
+      "source": "/erikkapost-com",
+      "destination": "/erikkapost-com.html"
     }
   ],
   "headers": [
