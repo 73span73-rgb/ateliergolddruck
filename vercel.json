@@ -41,6 +41,14 @@
     {
       "source": "/amazon-vine-login",
       "destination": "/amazon-vine-login.html"
+    },
+    {
+      "source": "/gimkit-host/",
+      "destination": "/gimkit-host.html"
+    },
+    {
+      "source": "/gimkit-host",
+      "destination": "/gimkit-host.html"
     }
   ],
   "headers": [
