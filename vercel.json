@@ -33,6 +33,14 @@
     {
       "source": "/droven-io-enterprise-tech-innovation",
       "destination": "/droven-io-enterprise-tech-innovation.html"
+    },
+    {
+      "source": "/amazon-vine-login/",
+      "destination": "/amazon-vine-login.html"
+    },
+    {
+      "source": "/amazon-vine-login",
+      "destination": "/amazon-vine-login.html"
     }
   ],
   "headers": [
