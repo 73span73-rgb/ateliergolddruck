@@ -57,6 +57,14 @@
     {
       "source": "/sparkpressfusion-com",
       "destination": "/sparkpressfusion-com.html"
+    },
+    {
+      "source": "/linkrify/",
+      "destination": "/linkrify.html"
+    },
+    {
+      "source": "/linkrify",
+      "destination": "/linkrify.html"
     }
   ],
   "headers": [
