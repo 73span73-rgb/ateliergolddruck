@@ -49,6 +49,14 @@
     {
       "source": "/gimkit-host",
       "destination": "/gimkit-host.html"
+    },
+    {
+      "source": "/sparkpressfusion-com/",
+      "destination": "/sparkpressfusion-com.html"
+    },
+    {
+      "source": "/sparkpressfusion-com",
+      "destination": "/sparkpressfusion-com.html"
     }
   ],
   "headers": [
