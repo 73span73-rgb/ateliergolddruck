@@ -97,6 +97,14 @@
     {
       "source": "/success100x-com",
       "destination": "/success100x-com.html"
+    },
+    {
+      "source": "/magfusehub-com/",
+      "destination": "/magfusehub-com.html"
+    },
+    {
+      "source": "/magfusehub-com",
+      "destination": "/magfusehub-com.html"
     }
   ],
   "headers": [
