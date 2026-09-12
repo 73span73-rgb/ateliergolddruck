@@ -89,6 +89,14 @@
     {
       "source": "/mytecharm-com",
       "destination": "/mytecharm-com.html"
+    },
+    {
+      "source": "/success100x-com/",
+      "destination": "/success100x-com.html"
+    },
+    {
+      "source": "/success100x-com",
+      "destination": "/success100x-com.html"
     }
   ],
   "headers": [
