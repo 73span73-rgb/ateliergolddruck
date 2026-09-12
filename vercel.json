@@ -81,6 +81,14 @@
     {
       "source": "/uploadarticle-com",
       "destination": "/uploadarticle-com.html"
+    },
+    {
+      "source": "/mytecharm-com/",
+      "destination": "/mytecharm-com.html"
+    },
+    {
+      "source": "/mytecharm-com",
+      "destination": "/mytecharm-com.html"
     }
   ],
   "headers": [
