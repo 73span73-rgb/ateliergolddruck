@@ -73,6 +73,14 @@
     {
       "source": "/erikkapost-com",
       "destination": "/erikkapost-com.html"
+    },
+    {
+      "source": "/uploadarticle-com/",
+      "destination": "/uploadarticle-com.html"
+    },
+    {
+      "source": "/uploadarticle-com",
+      "destination": "/uploadarticle-com.html"
     }
   ],
   "headers": [
