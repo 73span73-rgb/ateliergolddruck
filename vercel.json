@@ -105,6 +105,14 @@
     {
       "source": "/magfusehub-com",
       "destination": "/magfusehub-com.html"
+    },
+    {
+      "source": "/yonochomp-com/",
+      "destination": "/yonochomp-com.html"
+    },
+    {
+      "source": "/yonochomp-com",
+      "destination": "/yonochomp-com.html"
     }
   ],
   "headers": [
