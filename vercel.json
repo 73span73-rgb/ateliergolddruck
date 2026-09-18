@@ -113,6 +113,14 @@
     {
       "source": "/yonochomp-com",
       "destination": "/yonochomp-com.html"
+    },
+    {
+      "source": "/wisestudyspot-com/",
+      "destination": "/wisestudyspot-com.html"
+    },
+    {
+      "source": "/wisestudyspot-com",
+      "destination": "/wisestudyspot-com.html"
     }
   ],
   "headers": [
