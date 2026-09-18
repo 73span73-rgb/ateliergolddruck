@@ -3,13 +3,13 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/coyyn-com-business",
-      "destination": "/Coyyn-com-Business",
+      "source": "/Coyyn-com-Business",
+      "destination": "/coyyn-com-business",
       "permanent": true
     },
     {
-      "source": "/coyyn-com-business/",
-      "destination": "/Coyyn-com-Business",
+      "source": "/Coyyn-com-Business/",
+      "destination": "/coyyn-com-business",
       "permanent": true
     }
   ],
@@ -135,12 +135,12 @@
       "destination": "/wisestudyspot-com.html"
     },
     {
-      "source": "/Coyyn-com-Business/",
-      "destination": "/Coyyn-com-Business.html"
+      "source": "/coyyn-com-business/",
+      "destination": "/coyyn-com-business.html"
     },
     {
-      "source": "/Coyyn-com-Business",
-      "destination": "/Coyyn-com-Business.html"
+      "source": "/coyyn-com-business",
+      "destination": "/coyyn-com-business.html"
     }
   ],
   "headers": [
