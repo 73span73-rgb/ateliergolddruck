@@ -1,6 +1,18 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/coyyn-com-business",
+      "destination": "/Coyyn-com-Business",
+      "permanent": true
+    },
+    {
+      "source": "/coyyn-com-business/",
+      "destination": "/Coyyn-com-Business",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/glaadvoice-com/",
@@ -128,14 +140,6 @@
     },
     {
       "source": "/Coyyn-com-Business",
-      "destination": "/Coyyn-com-Business.html"
-    },
-    {
-      "source": "/coyyn-com-business/",
-      "destination": "/Coyyn-com-Business.html"
-    },
-    {
-      "source": "/coyyn-com-business",
       "destination": "/Coyyn-com-Business.html"
     }
   ],
