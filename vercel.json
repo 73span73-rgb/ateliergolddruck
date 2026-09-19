@@ -157,6 +157,14 @@
     {
       "source": "/mike-krieger-and-toshihiro-suzuki",
       "destination": "/mike-krieger-and-toshihiro-suzuki.html"
+    },
+    {
+      "source": "/uitly-com/",
+      "destination": "/uitly-com.html"
+    },
+    {
+      "source": "/uitly-com",
+      "destination": "/uitly-com.html"
     }
   ],
   "headers": [
