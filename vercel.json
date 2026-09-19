@@ -149,6 +149,14 @@
     {
       "source": "/foxydroom-com",
       "destination": "/foxydroom-com.html"
+    },
+    {
+      "source": "/mike-krieger-and-toshihiro-suzuki/",
+      "destination": "/mike-krieger-and-toshihiro-suzuki.html"
+    },
+    {
+      "source": "/mike-krieger-and-toshihiro-suzuki",
+      "destination": "/mike-krieger-and-toshihiro-suzuki.html"
     }
   ],
   "headers": [
