@@ -141,6 +141,14 @@
     {
       "source": "/coyyn-com-business",
       "destination": "/coyyn-com-business.html"
+    },
+    {
+      "source": "/foxydroom-com/",
+      "destination": "/foxydroom-com.html"
+    },
+    {
+      "source": "/foxydroom-com",
+      "destination": "/foxydroom-com.html"
     }
   ],
   "headers": [
