@@ -222,12 +222,12 @@
           <p>You choose a Kit, select a game mode, configure the game settings, share the game code or join link with students, and start the session. Gimkit's current hosting instructions follow essentially this sequence.</p>
 
         <!-- Table of Contents (Collapsed by default, opens on click) -->
-        <div class="toc-card">
-          <div class="toc-header" onclick="toggleToc(this)">
-            <h3 class="toc-title"><span>&#128214;</span> Table of Contents</h3>
+        <nav class="toc-card" aria-label="Table of Contents">
+          <div class="toc-header" onclick="toggleToc(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleToc(this);}" role="button" tabindex="0" aria-expanded="false" aria-controls="tocList">
+            <span class="toc-title"><span>&#128214;</span> Table of Contents</span>
             <span class="toc-badge"><span class="toc-badge-text">Show</span> <span class="toc-toggle-icon">&#9654;</span></span>
           </div>
-          <ul class="toc-list" style="display:none;">
+          <ol class="toc-list" id="tocList" style="display:none;">
             <li><a href="#what-is-a-gimkit-host">1. What Is a Gimkit Host?</a></li>
             <li><a href="#what-is-gimkit">2. What Is Gimkit?</a></li>
             <li><a href="#what-does-a-gimkit-host-need">3. What Does a Gimkit Host Need?</a></li>
@@ -250,8 +250,7 @@
             <li><a href="#frequently-asked-questions-about-gimkit-host">20. Frequently Asked Questions About Gimkit Host</a></li>
             <li><a href="#gimkit-host-quick-start-checklist">21. Gimkit Host: Quick Start Checklist</a></li>
             <li><a href="#final-thoughts-on-gimkit-host">22. Final Thoughts on Gimkit Host</a></li>
-          </ul>
-        </div>
+          
 
 
           <p>What makes hosting interesting is that the teacher is not simply pressing &quot;Start.&quot; A host controls the game environment, decides how the activity should run, manages players, chooses settings, and can monitor the class while the game is underway.</p>
@@ -1129,7 +1128,7 @@
   <button class="back-to-top" id="backToTop" aria-label="Scroll to top">&#9650;</button>
 
   <!-- Main JavaScript -->
-    <script>
+      <script>
     function toggleToc(header) {
       if (!header) return;
       var card = header.closest('.toc-card');
@@ -1146,17 +1145,19 @@
         list.style.display = 'grid';
         list.classList.add('show');
         header.classList.add('border-open');
+        header.setAttribute('aria-expanded', 'true');
         if (icon) icon.innerHTML = '&#9660;';
         if (badgeText) badgeText.innerText = 'Hide';
       } else {
         list.style.display = 'none';
         list.classList.remove('show');
         header.classList.remove('border-open');
+        header.setAttribute('aria-expanded', 'false');
         if (icon) icon.innerHTML = '&#9654;';
         if (badgeText) badgeText.innerText = 'Show';
       }
     }
   </script>
-  <script src="js/main.js?v=2.5" defer></script>
+  <script src="js/main.js?v=2.6" defer></script>
 </body>
 </html>

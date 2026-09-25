@@ -221,12 +221,12 @@
           <p>Its website describes a platform built around <strong>dynamic links, QR codes, bio pages and analytics</strong>, with additional features such as branded domains, campaign organization, team collaboration, integrations, tracking pixels, notifications and a developer API.</p>
 
         <!-- Table of Contents (Collapsed by default, opens on click) -->
-        <div class="toc-card">
-          <div class="toc-header" onclick="toggleToc(this)">
-            <h3 class="toc-title"><span>&#128214;</span> Table of Contents</h3>
+        <nav class="toc-card" aria-label="Table of Contents">
+          <div class="toc-header" onclick="toggleToc(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleToc(this);}" role="button" tabindex="0" aria-expanded="false" aria-controls="tocList">
+            <span class="toc-title"><span>&#128214;</span> Table of Contents</span>
             <span class="toc-badge"><span class="toc-badge-text">Show</span> <span class="toc-toggle-icon">&#9654;</span></span>
           </div>
-          <ul class="toc-list" style="display:none;">
+          <ol class="toc-list" id="tocList" style="display:none;">
             <li><a href="#what-is-uitly-com">1. What Is Uitly Com?</a></li>
             <li><a href="#how-does-uitly-com-work">2. How Does Uitly Com Work?</a></li>
             <li><a href="#uitly-com-url-shortener">3. Uitly Com URL Shortener</a></li>
@@ -259,10 +259,10 @@
             <li><a href="#common-mistakes-when-using-uitly">30. Common Mistakes When Using Uitly</a></li>
             <li><a href="#frequently-asked-questions-about-uitly-com">31. Frequently Asked Questions About Uitly Com</a></li>
             <li><a href="#final-thoughts-on-uitly-com">32. Final Thoughts on Uitly Com</a></li>
-          </ul>
-        </div>
+          </ol>
+        </nav>
 
-          <p>That makes Uitly particularly relevant to marketers, creators, businesses, agencies and anyone who needs to manage links across digital and offline campaigns.</p>
+<p>That makes Uitly particularly relevant to marketers, creators, businesses, agencies and anyone who needs to manage links across digital and offline campaigns.</p>
           <p>But there is another side worth understanding. A URL-shortening service sits between a user and the final destination, so questions about analytics, redirects, privacy, link reliability and domain trust naturally matter.</p>
           <p>This guide explains what Uitly.com is, how its main features work, what businesses can use it for, how to evaluate the platform, and what to consider before making it part of a long-term marketing workflow.</p>
 
@@ -1034,7 +1034,7 @@
     </div>
   </footer>
 
-    <script>
+      <script>
     function toggleToc(header) {
       if (!header) return;
       var card = header.closest('.toc-card');
@@ -1051,17 +1051,19 @@
         list.style.display = 'grid';
         list.classList.add('show');
         header.classList.add('border-open');
+        header.setAttribute('aria-expanded', 'true');
         if (icon) icon.innerHTML = '&#9660;';
         if (badgeText) badgeText.innerText = 'Hide';
       } else {
         list.style.display = 'none';
         list.classList.remove('show');
         header.classList.remove('border-open');
+        header.setAttribute('aria-expanded', 'false');
         if (icon) icon.innerHTML = '&#9654;';
         if (badgeText) badgeText.innerText = 'Show';
       }
     }
   </script>
-  <script src="js/main.js?v=2.5" defer></script>
+  <script src="js/main.js?v=2.6" defer></script>
 </body>
 </html>

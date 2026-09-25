@@ -222,12 +222,12 @@
           <p><strong>Amazon Vine is an invitation-only program for selected reviewers, known as Vine Voices.</strong> Amazon says there is no public application form or sign-up page for customers who want to become Vine Voices. Invitations are based on the quality and helpfulness of a customer's review history, along with factors such as consistency and category relevance.</p>
 
         <!-- Table of Contents (Collapsed by default, opens on click) -->
-        <div class="toc-card">
-          <div class="toc-header" onclick="toggleToc(this)">
-            <h3 class="toc-title"><span>&#128214;</span> Table of Contents</h3>
+        <nav class="toc-card" aria-label="Table of Contents">
+          <div class="toc-header" onclick="toggleToc(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleToc(this);}" role="button" tabindex="0" aria-expanded="false" aria-controls="tocList">
+            <span class="toc-title"><span>&#128214;</span> Table of Contents</span>
             <span class="toc-badge"><span class="toc-badge-text">Show</span> <span class="toc-toggle-icon">&#9654;</span></span>
           </div>
-          <ul class="toc-list" style="display:none;">
+          <ol class="toc-list" id="tocList" style="display:none;">
             <li><a href="#what-is-amazon-vine">1. What Is Amazon Vine?</a></li>
             <li><a href="#amazon-vine-login-how-does-it-work">2. Amazon Vine Login: How Does It Work?</a></li>
             <li><a href="#is-there-a-separate-amazon-vine-login">3. Is There a Separate Amazon Vine Login?</a></li>
@@ -250,8 +250,7 @@
             <li><a href="#why-you-may-see-conflicting-amazon-vine-login-information-online">20. Why You May See Conflicting Amazon Vine Login Information Online</a></li>
             <li><a href="#amazon-vine-login-faqs">21. Amazon Vine Login FAQs</a></li>
             <li><a href="#final-takeaway-amazon-vine-login">22. Final Takeaway: Amazon Vine Login</a></li>
-          </ul>
-        </div>
+          
 
 
           <p>That explains why simply searching for an &quot;Amazon Vine registration&quot; page often leads to confusion.</p>
@@ -987,7 +986,7 @@
   <button class="back-to-top" id="backToTop" aria-label="Scroll to top">&#9650;</button>
 
   <!-- Main JavaScript -->
-    <script>
+      <script>
     function toggleToc(header) {
       if (!header) return;
       var card = header.closest('.toc-card');
@@ -1004,17 +1003,19 @@
         list.style.display = 'grid';
         list.classList.add('show');
         header.classList.add('border-open');
+        header.setAttribute('aria-expanded', 'true');
         if (icon) icon.innerHTML = '&#9660;';
         if (badgeText) badgeText.innerText = 'Hide';
       } else {
         list.style.display = 'none';
         list.classList.remove('show');
         header.classList.remove('border-open');
+        header.setAttribute('aria-expanded', 'false');
         if (icon) icon.innerHTML = '&#9654;';
         if (badgeText) badgeText.innerText = 'Show';
       }
     }
   </script>
-  <script src="js/main.js?v=2.5" defer></script>
+  <script src="js/main.js?v=2.6" defer></script>
 </body>
 </html>

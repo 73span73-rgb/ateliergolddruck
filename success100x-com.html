@@ -222,12 +222,12 @@
           <p>Its content is organized around several broad themes, including <strong>Mindset &amp; Habits, Career &amp; Business, Personal Development, and Finance &amp; Wealth</strong>. The site also publishes individual guides covering subjects such as goal setting, productivity, career skills, financial planning, digital tools, and business development.</p>
 
         <!-- Table of Contents (Collapsed by default, opens on click) -->
-        <div class="toc-card">
-          <div class="toc-header" onclick="toggleToc(this)">
-            <h3 class="toc-title"><span>&#128214;</span> Table of Contents</h3>
+        <nav class="toc-card" aria-label="Table of Contents">
+          <div class="toc-header" onclick="toggleToc(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleToc(this);}" role="button" tabindex="0" aria-expanded="false" aria-controls="tocList">
+            <span class="toc-title"><span>&#128214;</span> Table of Contents</span>
             <span class="toc-badge"><span class="toc-badge-text">Show</span> <span class="toc-toggle-icon">&#9654;</span></span>
           </div>
-          <ul class="toc-list" style="display:none;">
+          <ol class="toc-list" id="tocList" style="display:none;">
             <li><a href="#what-is-success100xcom">1. What Is Success100x.com?</a></li>
             <li><a href="#what-does-success100x-mean">2. What Does “Success100x” Mean?</a></li>
             <li><a href="#what-topics-does-success100xcom-cover">3. What Topics Does Success100x.com Cover?</a></li>
@@ -254,8 +254,7 @@
             <li><a href="#what-to-keep-in-mind">24. What to Keep in Mind</a></li>
             <li><a href="#frequently-asked-questions-about-success100xcom">25. Frequently Asked Questions About Success100x.com</a></li>
             <li><a href="#final-verdict-what-is-success100xcom-really-about">26. Final Verdict: What Is Success100x.com Really About?</a></li>
-          </ul>
-        </div>
+          
 
 
           <p>That makes Success100x.com broader than a website focused on one particular definition of success.</p>
@@ -1139,7 +1138,7 @@
     </div>
   </footer>
 
-    <script>
+      <script>
     function toggleToc(header) {
       if (!header) return;
       var card = header.closest('.toc-card');
@@ -1156,17 +1155,19 @@
         list.style.display = 'grid';
         list.classList.add('show');
         header.classList.add('border-open');
+        header.setAttribute('aria-expanded', 'true');
         if (icon) icon.innerHTML = '&#9660;';
         if (badgeText) badgeText.innerText = 'Hide';
       } else {
         list.style.display = 'none';
         list.classList.remove('show');
         header.classList.remove('border-open');
+        header.setAttribute('aria-expanded', 'false');
         if (icon) icon.innerHTML = '&#9654;';
         if (badgeText) badgeText.innerText = 'Show';
       }
     }
   </script>
-  <script src="js/main.js?v=2.5" defer></script>
+  <script src="js/main.js?v=2.6" defer></script>
 </body>
 </html>

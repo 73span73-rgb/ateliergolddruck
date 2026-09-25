@@ -221,12 +221,12 @@
           <p>Mike Krieger is a Brazilian-born software engineer, entrepreneur and product leader best known for co-founding Instagram with Kevin Systrom and serving as Instagram's chief technology officer. His later career moved into AI and product development, including Artifact and Anthropic.</p>
 
         <!-- Table of Contents (Collapsed by default, opens on click) -->
-        <div class="toc-card">
-          <div class="toc-header" onclick="toggleToc(this)">
-            <h3 class="toc-title"><span>&#128214;</span> Table of Contents</h3>
+        <nav class="toc-card" aria-label="Table of Contents">
+          <div class="toc-header" onclick="toggleToc(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleToc(this);}" role="button" tabindex="0" aria-expanded="false" aria-controls="tocList">
+            <span class="toc-title"><span>&#128214;</span> Table of Contents</span>
             <span class="toc-badge"><span class="toc-badge-text">Show</span> <span class="toc-toggle-icon">&#9654;</span></span>
           </div>
-          <ul class="toc-list" style="display:none;">
+          <ol class="toc-list" id="tocList" style="display:none;">
             <li><a href="#who-are-mike-krieger-and-toshihiro-suzuki">1. Who Are Mike Krieger and Toshihiro Suzuki?</a></li>
             <li><a href="#mike-krieger-and-toshihiro-suzuki-at-a-glance">2. Mike Krieger and Toshihiro Suzuki at a Glance</a></li>
             <li><a href="#is-there-a-connection-between-mike-krieger-and-toshihiro-suzuki">3. Is There a Connection Between Mike Krieger and Toshihiro Suzuki?</a></li>
@@ -247,10 +247,10 @@
             <li><a href="#what-makes-their-careers-interesting">18. What Makes Their Careers Interesting?</a></li>
             <li><a href="#frequently-asked-questions">19. Frequently Asked Questions</a></li>
             <li><a href="#final-thoughts-on-mike-krieger-and-toshihiro-suzuki">20. Final Thoughts on Mike Krieger and Toshihiro Suzuki</a></li>
-          </ul>
-        </div>
+          </ol>
+        </nav>
 
-          <p>Toshihiro Suzuki is a Japanese business executive and the Representative Director and President of <strong>Suzuki Motor Corporation</strong>, the global manufacturer whose businesses include automobiles, motorcycles, outboard motors and other mobility-related products. Suzuki's current corporate information lists him in that role as of June 25, 2026.</p>
+<p>Toshihiro Suzuki is a Japanese business executive and the Representative Director and President of <strong>Suzuki Motor Corporation</strong>, the global manufacturer whose businesses include automobiles, motorcycles, outboard motors and other mobility-related products. Suzuki's current corporate information lists him in that role as of June 25, 2026.</p>
           <p>There is <strong>no reliable evidence establishing that Krieger and Suzuki are business partners, co-founders, relatives or collaborators</strong>. Their names are better understood as a comparison between two different approaches to innovation: one rooted in software, consumer technology and artificial intelligence, and the other in manufacturing, mobility and long-term industrial management.</p>
           <p>This article explains both careers, their companies, leadership responsibilities, major milestones, areas of innovation and what the search term actually means.</p>
 
@@ -741,7 +741,7 @@
     </div>
   </footer>
 
-    <script>
+      <script>
     function toggleToc(header) {
       if (!header) return;
       var card = header.closest('.toc-card');
@@ -758,17 +758,19 @@
         list.style.display = 'grid';
         list.classList.add('show');
         header.classList.add('border-open');
+        header.setAttribute('aria-expanded', 'true');
         if (icon) icon.innerHTML = '&#9660;';
         if (badgeText) badgeText.innerText = 'Hide';
       } else {
         list.style.display = 'none';
         list.classList.remove('show');
         header.classList.remove('border-open');
+        header.setAttribute('aria-expanded', 'false');
         if (icon) icon.innerHTML = '&#9654;';
         if (badgeText) badgeText.innerText = 'Show';
       }
     }
   </script>
-  <script src="js/main.js?v=2.5" defer></script>
+  <script src="js/main.js?v=2.6" defer></script>
 </body>
 </html>

@@ -220,12 +220,12 @@
           <p>This guide takes a closer look at WiseStudySpot .com, its apparent focus, the subjects readers may encounter, how to evaluate information published online, and how to distinguish the actual .com website from similarly named domains.</p>
 
         <!-- Table of Contents (Collapsed by default, opens on click) -->
-        <div class="toc-card">
-          <div class="toc-header" onclick="toggleToc(this)">
-            <h3 class="toc-title"><span>&#128214;</span> Table of Contents</h3>
+        <nav class="toc-card" aria-label="Table of Contents">
+          <div class="toc-header" onclick="toggleToc(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleToc(this);}" role="button" tabindex="0" aria-expanded="false" aria-controls="tocList">
+            <span class="toc-title"><span>&#128214;</span> Table of Contents</span>
             <span class="toc-badge"><span class="toc-badge-text">Show</span> <span class="toc-toggle-icon">&#9654;</span></span>
           </div>
-          <ul class="toc-list" style="display:none;">
+          <ol class="toc-list" id="tocList" style="display:none;">
             <li><a href="#what-is-wisestudyspot-com">1. What Is WiseStudySpot .com?</a></li>
             <li><a href="#wisestudyspot-com-at-a-glance">2. WiseStudySpot .com at a Glance</a></li>
             <li><a href="#what-does-wisestudyspot-com-cover">3. What Does WiseStudySpot .com Cover?</a></li>
@@ -261,8 +261,7 @@
             <li><a href="#what-is-seo-wisestudyspot-com">33. What is “SEO WiseStudySpot .com”?</a></li>
             <li><a href="#what-does-shopify-wisestudyspot-com-mean">34. What does “Shopify WiseStudySpot .com” mean?</a></li>
             <li><a href="#final-thoughts-on-wisestudyspot-com">35. Final Thoughts on WiseStudySpot .com</a></li>
-          </ul>
-        </div>
+          
 
 
           <hr style="border:0; border-top:1px solid var(--border-color); margin:2.5rem 0;">
@@ -816,7 +815,7 @@
     </div>
   </footer>
 
-    <script>
+      <script>
     function toggleToc(header) {
       if (!header) return;
       var card = header.closest('.toc-card');
@@ -833,17 +832,19 @@
         list.style.display = 'grid';
         list.classList.add('show');
         header.classList.add('border-open');
+        header.setAttribute('aria-expanded', 'true');
         if (icon) icon.innerHTML = '&#9660;';
         if (badgeText) badgeText.innerText = 'Hide';
       } else {
         list.style.display = 'none';
         list.classList.remove('show');
         header.classList.remove('border-open');
+        header.setAttribute('aria-expanded', 'false');
         if (icon) icon.innerHTML = '&#9654;';
         if (badgeText) badgeText.innerText = 'Show';
       }
     }
   </script>
-  <script src="js/main.js?v=2.5" defer></script>
+  <script src="js/main.js?v=2.6" defer></script>
 </body>
 </html>

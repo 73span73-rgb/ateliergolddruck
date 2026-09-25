@@ -220,12 +220,12 @@
           <p>That broad approach makes Magfusehub different from a specialist website. Someone visiting the site may find a technology article one day, a personal finance topic the next, and a travel, health, automotive, or lifestyle article after that.</p>
 
         <!-- Table of Contents (Collapsed by default, opens on click) -->
-        <div class="toc-card">
-          <div class="toc-header" onclick="toggleToc(this)">
-            <h3 class="toc-title"><span>&#128214;</span> Table of Contents</h3>
+        <nav class="toc-card" aria-label="Table of Contents">
+          <div class="toc-header" onclick="toggleToc(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleToc(this);}" role="button" tabindex="0" aria-expanded="false" aria-controls="tocList">
+            <span class="toc-title"><span>&#128214;</span> Table of Contents</span>
             <span class="toc-badge"><span class="toc-badge-text">Show</span> <span class="toc-toggle-icon">&#9654;</span></span>
           </div>
-          <ul class="toc-list" style="display:none;">
+          <ol class="toc-list" id="tocList" style="display:none;">
             <li><a href="#what-content-does-magfusehub-com-publish">1. What Content Does Magfusehub Com Publish?</a></li>
             <li><a href="#how-does-magfusehub-com-work">2. How Does Magfusehub Com Work?</a></li>
             <li><a href="#is-magfusehub-com-a-blog-magazine-or-news-website">3. Is Magfusehub Com a Blog, Magazine, or News Website?</a></li>
@@ -242,8 +242,7 @@
             <li><a href="#what-makes-magfusehub-com-different">14. What Makes Magfusehub Com Different?</a></li>
             <li><a href="#frequently-asked-questions-about-magfusehub-com">15. Frequently Asked Questions About Magfusehub Com</a></li>
             <li><a href="#final-verdict-is-magfusehub-com-worth-exploring">16. Final Verdict: Is Magfusehub Com Worth Exploring?</a></li>
-          </ul>
-        </div>
+          
 
           <p>But there is an important distinction to make: a website publishing information about many subjects is not automatically an expert authority on every subject. For everyday reading and topic discovery, a broad publication can be useful. For medical, financial, legal, or other high-stakes decisions, individual claims should still be checked against authoritative sources.</p>
           <p>This guide takes a closer look at what Magfusehub com is, what it covers, how its content is organized, who may find it useful, and what readers should consider before relying on information published there.</p>
@@ -652,7 +651,7 @@
     </div>
   </footer>
 
-    <script>
+      <script>
     function toggleToc(header) {
       if (!header) return;
       var card = header.closest('.toc-card');
@@ -669,17 +668,19 @@
         list.style.display = 'grid';
         list.classList.add('show');
         header.classList.add('border-open');
+        header.setAttribute('aria-expanded', 'true');
         if (icon) icon.innerHTML = '&#9660;';
         if (badgeText) badgeText.innerText = 'Hide';
       } else {
         list.style.display = 'none';
         list.classList.remove('show');
         header.classList.remove('border-open');
+        header.setAttribute('aria-expanded', 'false');
         if (icon) icon.innerHTML = '&#9654;';
         if (badgeText) badgeText.innerText = 'Show';
       }
     }
   </script>
-  <script src="js/main.js?v=2.5" defer></script>
+  <script src="js/main.js?v=2.6" defer></script>
 </body>
 </html>

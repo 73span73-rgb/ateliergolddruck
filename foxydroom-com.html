@@ -221,12 +221,12 @@
           <p>Current public information indicates that Foxydroom.com operates primarily as a <strong>general-interest content website</strong>, with articles spanning subjects such as technology, education, travel, health, automotive topics, gaming and home-related interests. Recent examinations show a blog or online-magazine structure with individual articles, categories, dates and author bylines rather than a conventional software application or online store.</p>
 
         <!-- Table of Contents (Collapsed by default, opens on click) -->
-        <div class="toc-card">
-          <div class="toc-header" onclick="toggleToc(this)">
-            <h3 class="toc-title"><span>&#128214;</span> Table of Contents</h3>
+        <nav class="toc-card" aria-label="Table of Contents">
+          <div class="toc-header" onclick="toggleToc(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleToc(this);}" role="button" tabindex="0" aria-expanded="false" aria-controls="tocList">
+            <span class="toc-title"><span>&#128214;</span> Table of Contents</span>
             <span class="toc-badge"><span class="toc-badge-text">Show</span> <span class="toc-toggle-icon">&#9654;</span></span>
           </div>
-          <ul class="toc-list" style="display:none;">
+          <ol class="toc-list" id="tocList" style="display:none;">
             <li><a href="#what-is-foxydroom-com">1. What Is Foxydroom Com?</a></li>
             <li><a href="#foxydroom-com-what-kind-of-website-is-it">2. Foxydroom Com: What Kind of Website Is It?</a></li>
             <li><a href="#what-topics-does-foxydroom-com-cover">3. What Topics Does Foxydroom Com Cover?</a></li>
@@ -248,8 +248,7 @@
             <li><a href="#how-to-use-foxydroom-com-more-effectively">19. How to Use Foxydroom Com More Effectively</a></li>
             <li><a href="#frequently-asked-questions-about-foxydroom-com">20. Frequently Asked Questions About Foxydroom Com</a></li>
             <li><a href="#final-thoughts-on-foxydroom-com">21. Final Thoughts on Foxydroom Com</a></li>
-          </ul>
-        </div>
+          
 
           <p>There is also some confusion around the domain because similarly named websites and third-party articles describe Foxydroom in different ways. That makes it particularly important to distinguish the <strong>exact foxydroom.com domain</strong> from other domains using similar names.</p>
           <p>This guide takes a closer look at the website, its content, categories, publishing structure, potential uses, limitations, safety considerations and the questions readers should ask before relying on information found there.</p>
@@ -834,7 +833,7 @@
     </div>
   </footer>
 
-    <script>
+      <script>
     function toggleToc(header) {
       if (!header) return;
       var card = header.closest('.toc-card');
@@ -851,17 +850,19 @@
         list.style.display = 'grid';
         list.classList.add('show');
         header.classList.add('border-open');
+        header.setAttribute('aria-expanded', 'true');
         if (icon) icon.innerHTML = '&#9660;';
         if (badgeText) badgeText.innerText = 'Hide';
       } else {
         list.style.display = 'none';
         list.classList.remove('show');
         header.classList.remove('border-open');
+        header.setAttribute('aria-expanded', 'false');
         if (icon) icon.innerHTML = '&#9654;';
         if (badgeText) badgeText.innerText = 'Show';
       }
     }
   </script>
-  <script src="js/main.js?v=2.5" defer></script>
+  <script src="js/main.js?v=2.6" defer></script>
 </body>
 </html>

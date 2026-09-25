@@ -222,12 +222,12 @@
           <p>So what exactly is SparkPressFusion.com?</p>
 
         <!-- Table of Contents (Collapsed by default, opens on click) -->
-        <div class="toc-card">
-          <div class="toc-header" onclick="toggleToc(this)">
-            <h3 class="toc-title"><span>&#128214;</span> Table of Contents</h3>
+        <nav class="toc-card" aria-label="Table of Contents">
+          <div class="toc-header" onclick="toggleToc(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleToc(this);}" role="button" tabindex="0" aria-expanded="false" aria-controls="tocList">
+            <span class="toc-title"><span>&#128214;</span> Table of Contents</span>
             <span class="toc-badge"><span class="toc-badge-text">Show</span> <span class="toc-toggle-icon">&#9654;</span></span>
           </div>
-          <ul class="toc-list" style="display:none;">
+          <ol class="toc-list" id="tocList" style="display:none;">
             <li><a href="#what-is-sparkpressfusioncom">1. What Is SparkPressFusion.com?</a></li>
             <li><a href="#why-is-sparkpressfusioncom-confusing">2. Why Is SparkPressFusion.com Confusing?</a></li>
             <li><a href="#sparkpressfusioncom-vs-sparkpresssfusioncom">3. SparkPressFusion.com vs SparkPressSFusion.com</a></li>
@@ -252,11 +252,10 @@
             <li><a href="#how-to-research-sparkpressfusioncom-properly">22. How to Research SparkPressFusion.com Properly</a></li>
             <li><a href="#frequently-asked-questions-about-sparkpressfusioncom">23. Frequently Asked Questions About SparkPressFusion.com</a></li>
             <li><a href="#final-verdict-what-is-sparkpressfusioncom">24. Final Verdict: What Is SparkPressFusion.com?</a></li>
-          </ul>
-        </div>
+          </ol>
+        </nav>
 
-
-          <p>The most important answer is also the simplest:</p>
+<p>The most important answer is also the simplest:</p>
 
           <p>You need to distinguish the exact domain from similarly named websites before deciding what SparkPressFusion is.</p>
 
@@ -1287,7 +1286,7 @@
     </div>
   </footer>
 
-    <script>
+      <script>
     function toggleToc(header) {
       if (!header) return;
       var card = header.closest('.toc-card');
@@ -1304,17 +1303,19 @@
         list.style.display = 'grid';
         list.classList.add('show');
         header.classList.add('border-open');
+        header.setAttribute('aria-expanded', 'true');
         if (icon) icon.innerHTML = '&#9660;';
         if (badgeText) badgeText.innerText = 'Hide';
       } else {
         list.style.display = 'none';
         list.classList.remove('show');
         header.classList.remove('border-open');
+        header.setAttribute('aria-expanded', 'false');
         if (icon) icon.innerHTML = '&#9654;';
         if (badgeText) badgeText.innerText = 'Show';
       }
     }
   </script>
-  <script src="js/main.js?v=2.5" defer></script>
+  <script src="js/main.js?v=2.6" defer></script>
 </body>
 </html>
