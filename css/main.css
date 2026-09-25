@@ -72,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02em;
   margin-top: 2.2rem;
   margin-bottom: 1rem;
+  scroll-margin-top: 100px;
 }
 
 h1 {
