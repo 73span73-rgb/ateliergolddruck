@@ -5,12 +5,20 @@
 
 // Universal Table of Contents Toggle Function
 window.toggleToc = function(header) {
+  if (!header) return;
   const card = header.closest('.toc-card');
   if (!card) return;
   const list = card.querySelector('.toc-list');
   const badgeText = header.querySelector('.toc-badge-text');
   const icon = header.querySelector('.toc-toggle-icon');
   if (!list) return;
+
+  // Prevent duplicate execution within 200ms
+  const now = Date.now();
+  if (header._lastToggle && (now - header._lastToggle < 200)) {
+    return;
+  }
+  header._lastToggle = now;
 
   const isClosed = list.style.display === 'none' || !list.classList.contains('show') || window.getComputedStyle(list).display === 'none';
   if (isClosed) {
@@ -67,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Table of Contents Toggle (Supports all pages and cards)
   const initTocToggles = () => {
     document.querySelectorAll('.toc-header').forEach(header => {
-      // Remove any duplicate listener by replacing or checking flag
-      if (!header.dataset.tocBound) {
+      // If header already has inline onclick, do NOT attach a second click listener
+      if (!header.getAttribute('onclick') && !header.dataset.tocBound) {
         header.dataset.tocBound = "true";
         header.addEventListener('click', () => {
           window.toggleToc(header);

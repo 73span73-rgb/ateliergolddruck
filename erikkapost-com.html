@@ -1168,6 +1168,34 @@
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
+    <script>
+    function toggleToc(header) {
+      if (!header) return;
+      var card = header.closest('.toc-card');
+      if (!card) return;
+      var list = card.querySelector('.toc-list');
+      var badgeText = header.querySelector('.toc-badge-text');
+      var icon = header.querySelector('.toc-toggle-icon');
+      if (!list) return;
+      var now = Date.now();
+      if (header._lastToggle && (now - header._lastToggle < 200)) return;
+      header._lastToggle = now;
+      var isClosed = (list.style.display === 'none' || !list.classList.contains('show') || window.getComputedStyle(list).display === 'none');
+      if (isClosed) {
+        list.style.display = 'grid';
+        list.classList.add('show');
+        header.classList.add('border-open');
+        if (icon) icon.innerHTML = '&#9660;';
+        if (badgeText) badgeText.innerText = 'Hide';
+      } else {
+        list.style.display = 'none';
+        list.classList.remove('show');
+        header.classList.remove('border-open');
+        if (icon) icon.innerHTML = '&#9654;';
+        if (badgeText) badgeText.innerText = 'Show';
+      }
+    }
+  </script>
+  <script src="js/main.js?v=2.5" defer></script>
 </body>
 </html>
