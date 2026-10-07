@@ -165,6 +165,14 @@
     {
       "source": "/uitly-com",
       "destination": "/uitly-com.html"
+    },
+    {
+      "source": "/redeepseek-com/",
+      "destination": "/redeepseek-com.html"
+    },
+    {
+      "source": "/redeepseek-com",
+      "destination": "/redeepseek-com.html"
     }
   ],
   "headers": [
