@@ -173,6 +173,22 @@
     {
       "source": "/redeepseek-com",
       "destination": "/redeepseek-com.html"
+    },
+    {
+      "source": "/Deltawifi-com-Login/",
+      "destination": "/deltawifi-com-login.html"
+    },
+    {
+      "source": "/Deltawifi-com-Login",
+      "destination": "/deltawifi-com-login.html"
+    },
+    {
+      "source": "/deltawifi-com-login/",
+      "destination": "/deltawifi-com-login.html"
+    },
+    {
+      "source": "/deltawifi-com-login",
+      "destination": "/deltawifi-com-login.html"
     }
   ],
   "headers": [
