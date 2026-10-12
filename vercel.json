@@ -11,6 +11,16 @@
       "source": "/Coyyn-com-Business/",
       "destination": "/coyyn-com-business",
       "permanent": true
+    },
+    {
+      "source": "/Deltawifi-com-Login",
+      "destination": "/deltawifi-com-login",
+      "permanent": true
+    },
+    {
+      "source": "/Deltawifi-com-Login/",
+      "destination": "/deltawifi-com-login",
+      "permanent": true
     }
   ],
   "rewrites": [
