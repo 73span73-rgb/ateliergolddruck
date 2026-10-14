@@ -21,6 +21,16 @@
       "source": "/Deltawifi-com-Login/",
       "destination": "/deltawifi-com-login",
       "permanent": true
+    },
+    {
+      "source": "/Startup-Booted",
+      "destination": "/startup-booted",
+      "permanent": true
+    },
+    {
+      "source": "/Startup-Booted/",
+      "destination": "/startup-booted",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -199,6 +209,14 @@
     {
       "source": "/deltawifi-com-login",
       "destination": "/deltawifi-com-login.html"
+    },
+    {
+      "source": "/startup-booted/",
+      "destination": "/startup-booted.html"
+    },
+    {
+      "source": "/startup-booted",
+      "destination": "/startup-booted.html"
     }
   ],
   "headers": [
